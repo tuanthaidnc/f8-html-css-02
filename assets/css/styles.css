@@ -119,12 +119,14 @@ a {
 
 .hero-wrap {
     display: flex;
+    justify-content: space-between;
     padding-bottom: 65px;
 }
 
 .hero-wrap .info {
+    width: 470px;
     margin-top: 64px;
-    margin-left: 230px;
+    /* margin-left: 230px; */
 }
 
 .hero-wrap .title {
@@ -309,7 +311,7 @@ a {
 }
 
 .courses .list .body .desc {
-    width: 326px;
+    /* width: 326px; */
     margin-top: 6px;
     color: #5f5b53;
     font-size: 1.4rem;
