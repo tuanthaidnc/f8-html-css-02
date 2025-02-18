@@ -24,7 +24,7 @@ a {
 
 .content {
     width: 81.25%;
-    max-width: 100%;
+    max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -51,10 +51,16 @@ a {
     background: #fffcf4;
 }
 
+.header.fixed {
+    position: sticky;
+    top: -28px;
+    z-index: 1;
+}
+
 .header .navbar {
+    padding: 36px 0 8px;
     display: flex;
     align-items: center;
-    padding-top: 36px;
 }
 
 .header .navigation {
@@ -69,25 +75,28 @@ a {
 }
 
 .header ul li a {
-    margin-right: 42px;
+    position: relative;
+    /* margin-right: 42px; */
+    padding: 8px 21px;
     color: #5f5b53;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.75; /* 175% */
 }
 
-.header ul li:first-child a {
-    position: relative;
+.header ul li a:hover,
+.header ul .active {
     color: #171100;
-    font-weight: 600;
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor;
 }
 
-.header ul li:first-child a::after {
+.header ul .active a::after {
     position: absolute;
     content: "";
     display: inline-block;
-    bottom: -1px;
-    left: 0;
+    bottom: 7px;
+    left: 21px;
     width: 12px;
     height: 2px;
     border-radius: 1px;
@@ -101,7 +110,7 @@ a {
 /* Hero */
 
 .hero {
-    padding-top: 64px;
+    padding-top: 56px;
     background: #fffcf4;
 }
 
@@ -114,6 +123,7 @@ a {
 }
 
 .img-block {
+    width: 49%;
     position: relative;
 }
 
@@ -124,7 +134,8 @@ a {
 }
 
 .hero-wrap .info {
-    width: 470px;
+    padding-left: 130px;
+    width: 51%;
     margin-top: 64px;
     /* margin-left: 230px; */
 }
@@ -194,9 +205,9 @@ a {
     padding: 24px;
     position: absolute;
     bottom: 48px;
-    right: -100px;
+    right: 0;
     width: 270px;
-    height: 244px;
+    /* height: 244px; */
     border-radius: 12px;
     background: #fff;
     box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
@@ -205,6 +216,10 @@ a {
 .img-block .course {
     display: flex;
     margin-bottom: 14px;
+}
+
+.img-block .card > .course:last-child {
+    margin-bottom: 0;
 }
 
 .img-block .card-info {
